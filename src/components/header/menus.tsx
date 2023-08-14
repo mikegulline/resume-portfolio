@@ -4,13 +4,17 @@ import { IoLogoLinkedin, IoLogoGithub } from 'react-icons/io';
 //////////////
 //////////////
 
-const MainMenuLink = ({ children, ...rest }) => (
+type LinkProps = {
+  children: React.ReactNode;
+};
+
+const MainMenuLink = ({ children, ...rest }: LinkProps) => (
   <Link {...rest} className='text-lg hover:text-purple-600 hover:underline'>
     {children}
   </Link>
 );
 
-const Button = ({ children, ...rest }) => (
+const Button = ({ children, ...rest }: LinkProps) => (
   <Link
     {...rest}
     className='px-5 h-12 flex items-center justify-center bg-purple-600 border border-purple-900 text-white rounded text-lg'
@@ -19,7 +23,7 @@ const Button = ({ children, ...rest }) => (
   </Link>
 );
 
-const Icon = ({ children, ...rest }) => (
+const Icon = ({ children, ...rest }: LinkProps) => (
   <Link
     {...rest}
     className='flex items-center justify-center h-12 w-12 bg-white text-purple-600 border border-purple-400 rounded-full text-2xl'
