@@ -19,14 +19,8 @@ export default function MenuLinks({ menu, className }: MenuLinksType) {
                 className={className}
                 aria-label={title}
               >
-                {Icon ? (
-                  <>
-                    <Icon />
-                    <span className='hidden'>{title}</span>
-                  </>
-                ) : (
-                  <span>{title}</span>
-                )}
+                {Icon && <Icon />}
+                <span className={Icon ? 'hidden' : ''}>{title}</span>
               </Link>
             </li>
           );

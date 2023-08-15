@@ -4,7 +4,8 @@ export default function Branding() {
   const styles = {
     wrapper: 'flex gap-3 flex-row-reverse items-center pr-10',
     h1: 'font-black uppercase text-2xl text-gray-700 leading-7',
-    tagline: 'text-sm text-gray-400 uppercase leading-4',
+    tagline:
+      'text-xs font-medium tracking-wider text-gray-400 uppercase leading-4',
     avatar:
       'rounded-full bg-gray-700 w-14 h-14 border border-gray-800 shadow-[inset_0_10px_5px_rgba(0,0,0,0.25)] text-white flex justify-center items-center ',
   };

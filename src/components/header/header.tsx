@@ -26,7 +26,7 @@ export default function Header() {
     const passUlClassName = 'flex gap-2 items-center';
     return (
       <nav aria-label='Secondary menu'>
-        <MenuLinks menu={mainMenu} className={passUlClassName} />
+        <MenuLinks menu={secondaryMenu} className={passUlClassName} />
       </nav>
     );
   };
