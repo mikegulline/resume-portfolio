@@ -1,32 +1,31 @@
 import Link from 'next/link';
 import { MenuType, MenuLinkType } from '@/components/header/menus';
-import React from 'react';
 
 type MenuLinksType = {
   menu: MenuType;
+  className?: string;
 };
 
-export default function MenuLinks({ menu }: MenuLinksType) {
-  return menu.map(
-    ({ title, href, target, icon, className }: MenuLinkType, i) => {
-      if (icon) {
-        const Icon = icon;
-        return (
-          <li key={title}>
-            <Link href={href} target={target} className={className}>
-              <Icon />
-              <span className='hidden'>{title}</span>
-            </Link>
-          </li>
-        );
-      }
-      return (
-        <li key={title}>
-          <Link href={href} target={target} className={className}>
-            <span>{title}</span>
-          </Link>
-        </li>
-      );
-    }
+export default function MenuLinks({ menu, className }: MenuLinksType) {
+  return (
+    <ul role='menu' className={className}>
+      {menu.map(
+        ({ title, href, target, className, icon: Icon }: MenuLinkType) => {
+          return (
+            <li key={title} role='menuitem'>
+              <Link
+                href={href}
+                target={target}
+                className={className}
+                aria-label={title}
+              >
+                {Icon && <Icon />}
+                <span>{title}</span>
+              </Link>
+            </li>
+          );
+        }
+      )}
+    </ul>
   );
 }

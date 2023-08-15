@@ -14,25 +14,19 @@ export default function Header() {
   );
 
   const MainMenu = () => {
+    const passUlClassName = 'flex gap-10 items-center';
     return (
-      <nav
-        role='navigation'
-        aria-label='Main menu'
-        className='flex grow justify-start'
-      >
-        <ul className='flex gap-10 items-center '>
-          <MenuLinks menu={mainMenu} />
-        </ul>
+      <nav aria-label='Main menu' className='flex grow justify-start'>
+        <MenuLinks menu={mainMenu} className={passUlClassName} />
       </nav>
     );
   };
 
   const SecondaryMenu = () => {
+    const passUlClassName = 'flex gap-2 items-center';
     return (
-      <nav role='navigation' aria-label='Secondary menu'>
-        <ul className='flex gap-2 items-center'>
-          <MenuLinks menu={secondaryMenu} />
-        </ul>
+      <nav aria-label='Secondary menu'>
+        <MenuLinks menu={mainMenu} className={passUlClassName} />
       </nav>
     );
   };
