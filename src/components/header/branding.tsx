@@ -1,5 +1,9 @@
 import Link from 'next/link';
 
+type WithChildren = {
+  children: React.ReactNode;
+};
+
 export default function Branding() {
   const styles = {
     wrapper: 'flex gap-3 flex-row-reverse items-center pr-10',
@@ -10,7 +14,7 @@ export default function Branding() {
       'rounded-full bg-gray-700 w-14 h-14 border border-gray-800 shadow-[inset_0_10px_5px_rgba(0,0,0,0.25)] text-white flex justify-center items-center ',
   };
 
-  const Wrapper = ({ children }) => (
+  const Wrapper = ({ children }: WithChildren) => (
     <Link href='/'>
       <div className={styles.wrapper}>{children}</div>
     </Link>
