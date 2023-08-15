@@ -1,5 +1,9 @@
-import Image from 'next/image';
+import HeroUserProfile from '@/components/sections/hero-user-profile';
 
 export default function Home() {
-  return <main>main</main>;
+  return (
+    <main>
+      <HeroUserProfile />
+    </main>
+  );
 }

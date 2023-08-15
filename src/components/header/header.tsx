@@ -1,5 +1,6 @@
 import Branding from './branding';
 import MenuLinks from './menu-links';
+import Wrapper from '@/components/wrapper';
 import { mainMenu, secondaryMenu } from '@/components/header/menus';
 
 type HeaderProps = {
@@ -7,23 +8,27 @@ type HeaderProps = {
 };
 
 export default function Header() {
-  const Wrapper = ({ children }: HeaderProps) => (
-    <div className='m-auto container max-w-screen-xl flex justify-between items-center gap-5 h-24'>
-      {children}
+  const Container = ({ children }: HeaderProps) => (
+    <div className='border-b border-gray-200'>
+      <Wrapper full>
+        <div className='flex justify-between items-center gap-5 h-16 lg:h-20'>
+          {children}
+        </div>
+      </Wrapper>
     </div>
   );
 
   const MainMenu = () => {
-    const passUlClassName = 'flex gap-10 items-center';
+    const passUlClassName = 'flex gap-8 items-center';
     return (
-      <nav aria-label='Main menu' className='flex grow justify-start'>
+      <nav aria-label='Main menu' className='md:flex grow justify-end hidden'>
         <MenuLinks menu={mainMenu} className={passUlClassName} />
       </nav>
     );
   };
 
   const SecondaryMenu = () => {
-    const passUlClassName = 'flex gap-2 items-center';
+    const passUlClassName = 'flex gap-1 items-center';
     return (
       <nav aria-label='Secondary menu'>
         <MenuLinks menu={secondaryMenu} className={passUlClassName} />
@@ -32,10 +37,10 @@ export default function Header() {
   };
 
   return (
-    <Wrapper>
+    <Container>
       <Branding />
       <MainMenu />
       <SecondaryMenu />
-    </Wrapper>
+    </Container>
   );
 }

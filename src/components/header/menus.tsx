@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { IoLogoLinkedin, IoLogoGithub } from 'react-icons/io';
 
@@ -6,10 +7,11 @@ import { IoLogoLinkedin, IoLogoGithub } from 'react-icons/io';
 // link styles
 
 const linkStyles = {
-  mainMenuLink: 'text-lg hover:text-purple-600 hover:underline',
+  mainMenuLink:
+    'font-medium hover:text-purple-600 data-[ui=active]:underline data-[ui=active]:text-purple-600',
   button:
-    'px-5 h-12 flex items-center justify-center bg-purple-600 border border-purple-900 text-white rounded text-lg',
-  icon: 'flex items-center justify-center h-12 w-12 bg-white text-purple-600 border border-purple-400 rounded-full text-2xl',
+    'px-3 lg:px-5 h-10 lg:h-12 flex font-medium items-center justify-center bg-purple-600 border border-purple-900 text-white rounded-full data-[ui=active]:bg-purple-100 data-[ui=active]:text-purple-600 data-[ui=active]:border-purple-600 hover:bg-white hover:text-purple-600 hover:border-purple-600',
+  icon: 'flex items-center justify-center h-10 w-10 bg-white text-purple-600 border border-purple-600 rounded-full text-xl hover:bg-purple-100',
 } as const;
 
 const { mainMenuLink, button, icon } = linkStyles;
