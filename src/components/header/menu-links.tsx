@@ -7,25 +7,26 @@ type MenuLinksType = {
 };
 
 export default function MenuLinks({ menu }: MenuLinksType) {
-  return menu.map(({ title, href, target, icon, wrapper }: MenuLinkType, i) => {
-    const Wrapper = wrapper || Link;
-    if (icon) {
-      const Icon = icon;
+  return menu.map(
+    ({ title, href, target, icon, className }: MenuLinkType, i) => {
+      if (icon) {
+        const Icon = icon;
+        return (
+          <li key={title}>
+            <Link href={href} target={target} className={className}>
+              <Icon />
+              <span className='hidden'>{title}</span>
+            </Link>
+          </li>
+        );
+      }
       return (
         <li key={title}>
-          <Wrapper href={href} target={target}>
-            <Icon />
-            <span className='hidden'>{title}</span>
-          </Wrapper>
+          <Link href={href} target={target} className={className}>
+            <span>{title}</span>
+          </Link>
         </li>
       );
     }
-    return (
-      <li key={title}>
-        <Wrapper href={href} target={target}>
-          <span>{title}</span>
-        </Wrapper>
-      </li>
-    );
-  });
+  );
 }

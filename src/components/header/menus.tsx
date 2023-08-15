@@ -9,8 +9,8 @@ export type MenuLinkType = {
   title: string;
   href: `http://${string}` | `https://${string}` | `/${string}`;
   target?: '_blank' | '_parent' | '_self' | '_top';
+  className?: string;
   icon?: React.ComponentType;
-  wrapper?: React.ComponentType;
 };
 
 export type MenuType = MenuLinkType[];
@@ -23,29 +23,13 @@ type MyLinkProps = {
 } & LinkProps &
   Omit<LinkProps, 'href'>;
 
-const MainMenuLink = ({ children, ...rest }: MyLinkProps) => (
-  <Link {...rest} className='text-lg hover:text-purple-600 hover:underline'>
-    {children}
-  </Link>
-);
+const MainMenuLink = 'text-lg hover:text-purple-600 hover:underline';
 
-const Button = ({ children, ...rest }: MyLinkProps) => (
-  <Link
-    {...rest}
-    className='px-5 h-12 flex items-center justify-center bg-purple-600 border border-purple-900 text-white rounded text-lg'
-  >
-    {children}
-  </Link>
-);
+const Button =
+  'px-5 h-12 flex items-center justify-center bg-purple-600 border border-purple-900 text-white rounded text-lg';
 
-const Icon = ({ children, ...rest }: MyLinkProps) => (
-  <Link
-    {...rest}
-    className='flex items-center justify-center h-12 w-12 bg-white text-purple-600 border border-purple-400 rounded-full text-2xl'
-  >
-    {children}
-  </Link>
-);
+const Icon =
+  'flex items-center justify-center h-12 w-12 bg-white text-purple-600 border border-purple-400 rounded-full text-2xl';
 
 //////////////
 //////////////
@@ -54,20 +38,17 @@ export const mainMenu: MenuType = [
   {
     title: 'Home',
     href: '/',
-    // @ts-expect-error
-    wrapper: MainMenuLink,
+    className: MainMenuLink,
   },
   {
     title: 'About',
     href: '/about',
-    // @ts-expect-error
-    wrapper: MainMenuLink,
+    className: MainMenuLink,
   },
   {
     title: 'Resume',
     href: '/resume',
-    // @ts-expect-error
-    wrapper: MainMenuLink,
+    className: MainMenuLink,
   },
 ];
 
@@ -77,21 +58,18 @@ export const secondaryMenu: MenuType = [
     href: 'https://www.linkedin.com/in/mikegulline/',
     target: '_blank',
     icon: IoLogoLinkedin,
-    // @ts-expect-error
-    wrapper: Icon,
+    className: Icon,
   },
   {
     title: 'GitHub',
     href: 'https://github.com/mikegulline',
     target: '_blank',
     icon: IoLogoGithub,
-    // @ts-expect-error
-    wrapper: Icon,
+    className: Icon,
   },
   {
     title: 'Contact',
     href: '/contact',
-    // @ts-expect-error
-    wrapper: Button,
+    className: Button,
   },
 ];
