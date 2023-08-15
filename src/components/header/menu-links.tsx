@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { MenuType, MenuLinkType } from '@/data/menus';
+import { MenuType, MenuLinkType } from '@/components/header/menus';
+import React from 'react';
 
 type MenuLinksType = {
   menu: MenuType;
