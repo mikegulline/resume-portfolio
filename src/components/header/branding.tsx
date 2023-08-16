@@ -32,8 +32,8 @@ export default function Branding() {
   const Avatar = () => (
     <div className={styles.avatar}>
       <span className='rotate-90 text-lg'>
-        <span className='group-hover:hidden'>:)</span>
-        <span className='hidden group-hover:inline'>:O</span>
+        <span className='group-hover:[&:not(:focus)]:hidden'>:)</span>
+        <span className='hidden group-hover:[&:not(:focus)]:inline'>:O</span>
       </span>
     </div>
   );
