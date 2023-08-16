@@ -20,8 +20,8 @@ export default function Branding() {
   const Wrapper = ({ children }: WithChildren) => (
     <Link
       href='/'
-      onMouseEnter={() => setShow(true)}
-      onMouseLeave={() => setShow(false)}
+      onMouseOver={() => setShow(true)}
+      onMouseOut={() => setShow(false)}
     >
       <div className={styles.wrapper}>{children}</div>
     </Link>
