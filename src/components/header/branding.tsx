@@ -1,5 +1,3 @@
-'use client';
-import { useState } from 'react';
 import Link from 'next/link';
 
 type WithChildren = {
@@ -7,10 +5,8 @@ type WithChildren = {
 };
 
 export default function Branding() {
-  const [show, setShow] = useState(false);
-
   const styles = {
-    wrapper: 'flex gap-2 flex-row-reverse items-center pr-2',
+    wrapper: 'flex gap-2 flex-row-reverse items-center pr-2 group',
     h1: 'font-medium text-xl text-gray-900 leading-7',
     tagline: 'text-xs font-medium  text-gray-400 uppercase leading-4 hidden',
     avatar:
@@ -18,12 +14,7 @@ export default function Branding() {
   };
 
   const Wrapper = ({ children }: WithChildren) => (
-    <Link
-      href='/'
-      // onMouseOver={() => setShow(true)}
-      // onMouseOut={() => setShow(false)}
-      className='block select-none'
-    >
+    <Link href='/' className='block select-none'>
       <div className={styles.wrapper}>{children}</div>
     </Link>
   );
@@ -37,7 +28,10 @@ export default function Branding() {
 
   const Avatar = () => (
     <div className={styles.avatar}>
-      <span className='rotate-90 text-lg'>{show ? ':O' : ':)'}</span>
+      <span className='rotate-90 text-lg'>
+        <span className='group-hover:hidden'>:)</span>
+        <span className='hidden group-hover:inline'>:O</span>
+      </span>
     </div>
   );
 
