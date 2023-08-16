@@ -22,7 +22,7 @@ export default function HeroUserProfile() {
             <h1 className='text-[8.5vw] lg:w-auto md:text-7xl lg:text-5xl xl:text-6xl leading-[1.1] md:leading-[1.1] lg:leading-[1.1] xl:leading-[1.1] uppercase flex flex-col grow justify-center font-medium'>
               <TextAnimation text={content.headline} />
             </h1>
-            <ul className='flex gap-2 border-t border-dashed border-gray-400 pt-5'>
+            <ul className='flex gap-4 border-t border-dashed border-gray-400 pt-5'>
               <li className='flex grow items-start'>
                 <Link
                   href={content.follow.link}
