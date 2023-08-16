@@ -16,8 +16,7 @@ export default function Branding() {
   const Wrapper = ({ children }: WithChildren) => (
     <Link
       href='/'
-      className='block select-none'
-      onClick={(e) => setTimeout(() => e.currentTarget.blur(), 100)}
+      className='block select-none focus:outline-none focus:shadow-none active:outline-none active:shadow-none'
     >
       <div className={styles.wrapper}>{children}</div>
     </Link>
