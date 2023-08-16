@@ -1,41 +1,24 @@
-'use client';
-import { useRef, useEffect } from 'react';
+import IndexWrap from '@/components/index-wrap';
+
 type TextAnimationProps = {
   text: string;
 };
 export default function TextAnimation({ text }: TextAnimationProps) {
-  let count = 0;
+  let index = 0;
 
   const newText = text.split(' ').map((word, i) => (
-    <span key={`${word}-${i}`} className='word'>
+    <IndexWrap key={`${word}-${i}`} className='word' index={index}>
       {word.split('').map((letter, x) => {
-        count++;
-        return <Letter key={`${letter}-${x}`} letter={letter} count={count} />;
+        index++;
+        return (
+          <IndexWrap key={`${letter}-${x}`} className='letter' index={index}>
+            {letter}
+          </IndexWrap>
+        );
       })}
       <span className='letter'>&nbsp;</span>
-    </span>
+    </IndexWrap>
   ));
 
   return <div>{newText}</div>;
-}
-
-type LetterProps = {
-  letter: string;
-  count: number;
-};
-
-function Letter({ letter, count }: LetterProps) {
-  const ref = useRef<HTMLSpanElement | null>(null);
-
-  useEffect(() => {
-    if (ref?.current) {
-      ref.current.style.setProperty('--index', count.toString());
-    }
-  }, [ref, count]);
-
-  return (
-    <span className='letter' ref={ref}>
-      {letter}
-    </span>
-  );
 }

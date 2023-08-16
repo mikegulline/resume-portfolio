@@ -9,7 +9,7 @@ export default function HeroUserProfile() {
       <Wrapper>
         <div className='lg:columns-2 gap-10 xl:gap-20 py-14 xl:py-20'>
           <div className='flex flex-col grow justify-between gap-8 xl:gap-16  lg:aspect-[4/3]'>
-            <h1 className='text-[9vw] lg:w-auto md:text-7xl lg:text-5xl xl:text-6xl leading-[1.2] md:leading-[1.2] lg:leading-[1.2] xl:leading-[1.2] uppercase flex flex-col grow justify-center font-medium'>
+            <h1 className='text-[9vw] lg:w-auto md:text-7xl lg:text-5xl xl:text-6xl leading-[1.1] md:leading-[1.1] lg:leading-[1.1] xl:leading-[1.1] uppercase flex flex-col grow justify-center font-medium'>
               <TextAnimation text='Professional Full-Stack Web Development.' />
             </h1>
             <ul className='flex border-t border-dashed border-gray-400 pt-5'>
@@ -26,8 +26,9 @@ export default function HeroUserProfile() {
                 </Link>
               </li>
               <li className='text-xs w-60 md:w-64'>
-                If you like what you see, let&rsquo;s connect! You can find me{' '}
-                <em>reluctently</em> on LinkedIn.
+                <TextAnimation
+                  text={`If you like what you see, let's connect! You can find me reluctently on LinkedIn.`}
+                />
               </li>
             </ul>
           </div>
