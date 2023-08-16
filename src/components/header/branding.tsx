@@ -14,7 +14,11 @@ export default function Branding() {
   };
 
   const Wrapper = ({ children }: WithChildren) => (
-    <Link href='/' className='block select-none'>
+    <Link
+      href='/'
+      className='block select-none'
+      onClick={(e) => e.currentTarget.blur()}
+    >
       <div className={styles.wrapper}>{children}</div>
     </Link>
   );
