@@ -17,7 +17,7 @@ export default function Branding() {
     <Link
       href='/'
       className='block select-none'
-      onClick={(e) => e.currentTarget.blur()}
+      onClick={(e) => setTimeout(() => e.currentTarget.blur(), 100)}
     >
       <div className={styles.wrapper}>{children}</div>
     </Link>
