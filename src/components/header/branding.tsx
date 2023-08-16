@@ -20,8 +20,8 @@ export default function Branding() {
   const Wrapper = ({ children }: WithChildren) => (
     <Link
       href='/'
-      onMouseOver={() => setShow(true)}
-      onMouseOut={() => setShow(false)}
+      // onMouseOver={() => setShow(true)}
+      // onMouseOut={() => setShow(false)}
       className='block select-none'
     >
       <div className={styles.wrapper}>{children}</div>
