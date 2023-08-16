@@ -16,7 +16,7 @@ export default function Branding() {
   const Wrapper = ({ children }: WithChildren) => (
     <Link
       href='/'
-      className='block select-none focus:outline-none focus:shadow-none active:outline-none active:shadow-none'
+      className='block select-none focus:outline-none focus:shadow-none focus:bg-none active:bg-none active:outline-none active:shadow-none  active:focus:bg-none active:focus:outline-none active:focus:shadow-none'
     >
       <div className={styles.wrapper}>{children}</div>
     </Link>
