@@ -3,6 +3,16 @@ import Link from 'next/link';
 import { BsArrowUpRight } from 'react-icons/bs';
 import TextAnimation from '@/components/text-animation';
 
+const content = {
+  headline: 'Professional Full-Stack Web Development.',
+  follow: {
+    text: '@mikegulline',
+    title: "Let's connect on LinkedIn",
+    link: 'https://www.linkedin.com/in/mikegulline/',
+    body: "If you like what you see, let's connect! You can find me reluctently on LinkedIn.",
+  },
+};
+
 export default function HeroUserProfile() {
   return (
     <section>
@@ -10,25 +20,22 @@ export default function HeroUserProfile() {
         <div className='lg:columns-2 gap-10 xl:gap-20 py-14 xl:py-20'>
           <div className='flex flex-col grow justify-between gap-8 xl:gap-16  lg:aspect-[4/3]'>
             <h1 className='text-[8.5vw] lg:w-auto md:text-7xl lg:text-5xl xl:text-6xl leading-[1.1] md:leading-[1.1] lg:leading-[1.1] xl:leading-[1.1] uppercase flex flex-col grow justify-center font-medium'>
-              <TextAnimation text='Professional Full-Stack Web Development.' />
+              <TextAnimation text={content.headline} />
             </h1>
             <ul className='flex gap-2 border-t border-dashed border-gray-400 pt-5'>
               <li className='flex grow items-start'>
                 <Link
-                  href='https://www.linkedin.com/in/mikegulline/'
+                  href={content.follow.link}
                   target='_blank'
                   className='group'
-                  title="Let's connect on LinkedIn"
+                  title={content.follow.title}
                 >
                   <div className='flex items-center gap-2 text-sm md:text-base group-hover:text-purple-600'>
-                    <span>@mikegulline</span> <BsArrowUpRight />
+                    <span>{content.follow.text}</span> <BsArrowUpRight />
                   </div>
                 </Link>
               </li>
-              <li className='text-xs w-60 md:w-64'>
-                If you like what you see, let&rsquo;s connect! You can find me
-                reluctently on LinkedIn.
-              </li>
+              <li className='text-xs w-60 md:w-64'>{content.follow.body}</li>
             </ul>
           </div>
 
