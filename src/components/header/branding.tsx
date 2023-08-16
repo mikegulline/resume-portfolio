@@ -22,7 +22,6 @@ export default function Branding() {
       href='/'
       onMouseEnter={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
-      onMouseUp={() => setShow(false)}
       onTouchEnd={() => setTimeout(() => setShow(false), 100)}
     >
       <div className={styles.wrapper}>{children}</div>
