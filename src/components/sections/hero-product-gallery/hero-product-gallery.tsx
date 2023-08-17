@@ -50,7 +50,7 @@ export default function HeroProductGallery() {
         <div className='lg:flex items-start relative lg:gap-14 xl:gap-32 lg:mb-14 xl:mb-20'>
           <div className='lg:w-80 flex flex-col lg:h-[350px]'>
             <h1 className='text-lg font-medium flex'>
-              <div className='-ml-2 px-2 bg-purple-100 rounded mb-1'>
+              <div className='-ml-2 px-2 mt-[6px] bg-purple-100 rounded mb-1'>
                 {content.headline}
               </div>
             </h1>
@@ -82,22 +82,20 @@ export default function HeroProductGallery() {
                 </h3>
                 <p className='text-sm'>{content.body}</p>
               </div>
-              <div className='md:columns-3 gap-4'>
-                <FrameAnimation index={0} className='fade-up'>
-                  <div className='aspect-video bg-gray-700 rounded-lg mb-4 md:mb-0'></div>
-                </FrameAnimation>
-                <FrameAnimation index={1} className='fade-up'>
-                  <div className='aspect-video bg-gray-700 rounded-lg mb-4 md:mb-0'></div>
-                </FrameAnimation>
-                <FrameAnimation index={2} className='fade-up'>
-                  <div className='aspect-video bg-gray-700 rounded-lg mb-4 md:mb-0'></div>
-                </FrameAnimation>
-              </div>
+              <FrameAnimation index={0} className='fade-up'>
+                <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
+                  <div className='aspect-video bg-gray-700 rounded-lg'></div>
+
+                  <div className='aspect-video bg-gray-700 rounded-lg'></div>
+
+                  <div className='col-span-2 md:col-auto aspect-video bg-gray-700 rounded-lg '></div>
+                </div>
+              </FrameAnimation>
             </div>
           </div>
         </div>
         <FrameAnimation index={0} className='fade-up'>
-          <div className='bg-gray-700 aspect-video rounded-lg overflow-hidden md:mt-4'>
+          <div className='bg-gray-700 aspect-video rounded-lg overflow-hidden md:mt-4 hidden lg:block'>
             <div className='w-full h-full flex items-center justify-center'>
               <span>image</span>
             </div>

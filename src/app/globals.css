@@ -67,20 +67,21 @@ body {
 
 .fade-up {
   transform-origin: top;
-  transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, 40px, 0);
 }
 
 .inView .fade-up {
-  animation: fade__up 0.6s forwards calc(0.05s * var(--index)) ease-out;
+  display: block;
+  animation: fade_up 1.6s forwards calc(0.05s * var(--index)) ease-out;
 }
 
-@keyframes fade__up {
+@keyframes fade_up {
   from {
     transform: translate3d(0, 40px, 0%);
   }
 
   to {
-    transform: translate3d(0, 0%, 0);
+    transform: translate3d(0, 0px, 0);
   }
 }
 

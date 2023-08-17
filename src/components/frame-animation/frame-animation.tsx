@@ -13,6 +13,7 @@ export default function FrameAnimation({
   className,
 }: FrameAnimationProps) {
   const ref = useRef<HTMLDivElement | null>(null);
+  const refSpan = useRef<HTMLSpanElement | null>(null);
   const entry = useIntersectionObserver(ref, {});
 
   useEffect(() => {
@@ -25,14 +26,16 @@ export default function FrameAnimation({
   }, [entry]);
 
   useEffect(() => {
-    if (ref?.current) {
-      ref.current.style.setProperty('--index', index.toString());
+    if (refSpan?.current) {
+      refSpan.current.style.setProperty('--index', index.toString());
     }
-  }, [ref, index]);
+  }, [refSpan, index]);
 
   return (
     <div ref={ref}>
-      <span className={className}>{children}</span>
+      <span className={className} ref={refSpan}>
+        {children}
+      </span>
     </div>
   );
 }
