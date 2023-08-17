@@ -19,15 +19,15 @@ export default function HeroUserProfile() {
   return (
     <section>
       <Wrapper>
-        <div className='lg:columns-2 gap-10 xl:gap-20 py-14 xl:py-20'>
+        <div className='lg:columns-2 gap-10 xl:gap-20 py-10 md:py-14 xl:py-20'>
           <div className='flex flex-col justify-between gap-2 xl:gap-4  lg:aspect-[4/3]'>
-            <h1 className='text-[10vw] lg:w-auto md:text-7xl lg:text-5xl xl:text-7xl leading-[1] md:leading-[1] lg:leading-[1] xl:leading-[1]  flex flex-col justify-center font-medium'>
+            <h1 className='text-[10.3vw] lg:w-auto md:text-7xl lg:text-5xl xl:text-7xl leading-[1] md:leading-[1] lg:leading-[1] xl:leading-[1]  flex flex-col justify-center font-medium'>
               <TextAnimation text={content.headline} />
             </h1>
             <div className='grow '>
               <PillTags tags={content.tags} />
             </div>
-            <ul className='flex gap-4 border-t border-dashed border-gray-400 pt-5'>
+            <ul className='flex gap-8 border-t border-dashed border-gray-400 pt-5 mt-5'>
               <li className='flex grow items-start'>
                 <Link
                   href={content.link.href}
@@ -45,7 +45,7 @@ export default function HeroUserProfile() {
           </div>
 
           <div className='relative rounded-lg overflow-hidden mt-10 lg:mt-0'>
-            <div className='bg-gray-800 aspect-[4/3]'>
+            <div className='bg-gray-700 aspect-[4/3]'>
               <div className='absolute right-5 bottom-5 z-10'>
                 <ul className='rounded-full backdrop-blur-sm bg-white/30 p-1 flex gap-2 items-center'>
                   <li>

@@ -6,7 +6,7 @@ const content = {
   title: 'Full-Stack Web Developer, Designer',
   from: '2015',
   to: '2023',
-  subhead: "America's Finest Homegrown Hemp CBD Products",
+  subhead: 'HempLand® USA came to me with an idea. I gave them a brand.',
   body: 'Started in 2015, HempLand® USA was one of the original hemp CBD oil manufactures in, you guessed it, the USA. Renowned for their proprietary hemp strain, HempLand® USA is able to produce hemp oil with high levels of CBD and virtually no THC.',
   link: {
     text: 'Product',
@@ -41,41 +41,57 @@ type HeroProductGalleryProps = typeof content;
 
 export default function HeroProductGallery() {
   return (
-    <section className='py-40'>
+    <section className='py-10 md:py-16 xl:py-32'>
       <Wrapper>
-        <h1 className='font-medium text-8xl mb-20 pb-10 border-b border-gray-400 border-dashed'>
+        <h1 className='font-medium text-6xl md:text-7xl  xl:text-8xl mb-10 pb-5  md:mb-10 md:pb-5 lg:mb-14 lg:pb-8 xl:mb-20 xl:pb-10 border-b border-gray-400 border-dashed'>
           Featured Project
         </h1>
 
-        <div className='flex items-start relative gap-32 '>
-          <div className='w-80 flex flex-col'>
-            <h1 className='text-lg font-medium mt-1 flex'>
-              {content.headline}
+        <div className='lg:flex items-start relative lg:gap-14 xl:gap-32 lg:mb-14 xl:mb-20'>
+          <div className='lg:w-80 flex flex-col lg:h-[350px]'>
+            <h1 className='text-lg font-medium flex'>
+              <div className='-ml-2 px-2 bg-purple-100 rounded mb-1'>
+                {content.headline}
+              </div>
             </h1>
-            <p className='text-sm mb-1'>{content.title}</p>
-            <p className='text-xs mb-10 flex items-center gap-1'>
+            <p className='text-sm mb-1 font-medium'>{content.title}</p>
+            <p className='text-xs mb-8 lg:mb-1 flex items-center gap-1'>
               <span>{content.from}</span>
               <span className='grow border-b border-gray-400 mt-[2px]'></span>
               <span>{content.to}</span>
             </p>
-            <div className='font-medium uppercase text-xs mb-1'>Services:</div>
-            <PillTags tags={content.services} />
-            <div className='font-medium uppercase text-xs mb-1 mt-4'>
-              Stack:
-            </div>
-            <PillTags tags={content.stack} />
+            <div className='grow'></div>
+            <ul className='flex gap-5 lg:block mb-8 lg:mb-0'>
+              <li>
+                <div className='font-medium uppercase text-xs'>Services:</div>
+                <PillTags tags={content.services} />
+              </li>
+              <li>
+                <div className='font-medium uppercase text-xs lg:mt-4'>
+                  Stack:
+                </div>
+                <PillTags tags={content.stack} />
+              </li>
+            </ul>
           </div>
-          <div className='grow h-full '>
-            <div className='w-[600px] flex flex-col'>
-              <h3 className='font-bold text-4xl mb-10 grow'>
-                {content.subhead}
-              </h3>
-              <p className='text-sm'>{content.body}</p>
+          <div className='grow lg:mb-0'>
+            <div className='lg:w-[568px] xl:w-[700px] flex flex-col lg:h-[350px]'>
+              <div className='grow  mb-8 lg:mb-0 lg:w-[520px] xl:w-[640px] '>
+                <h3 className='font-bold text-4xl lg:text-3xl xl:text-4xl mb-4'>
+                  {content.subhead}
+                </h3>
+                <p className='text-sm'>{content.body}</p>
+              </div>
+              <div className='md:columns-3 gap-4'>
+                <div className='aspect-video bg-gray-700 rounded-lg mb-4 md:mb-0'></div>
+                <div className='aspect-video bg-gray-700 rounded-lg mb-4 md:mb-0'></div>
+                <div className='aspect-video bg-gray-700 rounded-lg mb-4 md:mb-0'></div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className='bg-gray-600 aspect-video mt-10 rounded-lg overflow-hidden'>
+        <div className='bg-gray-700 aspect-video rounded-lg overflow-hidden md:mt-4'>
           <div className='w-full h-full flex items-center justify-center'>
             <span>image</span>
           </div>

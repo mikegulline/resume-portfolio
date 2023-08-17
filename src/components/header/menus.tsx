@@ -10,8 +10,8 @@ const linkStyles = {
   mainMenuLink:
     'font-medium hover:text-purple-600 data-[ui=active]:underline data-[ui=active]:text-purple-600',
   button:
-    'px-3 lg:px-5 h-10 lg:h-12 flex font-medium items-center justify-center bg-purple-600 border border-purple-900 text-white rounded-full data-[ui=active]:bg-purple-100 data-[ui=active]:text-purple-600 data-[ui=active]:border-purple-600 hover:bg-white hover:text-purple-600 hover:border-purple-600',
-  icon: 'flex items-center justify-center h-10 w-10 bg-white text-purple-600 border border-purple-600 rounded-full text-xl hover:bg-purple-100',
+    'px-3 lg:px-5 h-10 lg:h-12 flex font-medium items-center justify-center bg-purple-100 border border-purple-600 text-purple-700 rounded-full data-[ui=active]:bg-purple-100 data-[ui=active]:text-purple-600 data-[ui=active]:border-purple-600 hover:bg-white hover:text-purple-600',
+  icon: 'flex items-center justify-center h-10 w-10 bg-white text-gray-700 border border-gray-300 rounded-full text-xl hover:bg-purple-600 hover:text-white hover:border-purple-600',
 } as const;
 
 const { mainMenuLink, button, icon } = linkStyles;
