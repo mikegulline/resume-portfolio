@@ -1,9 +1,53 @@
+import Image from 'next/image';
+import Image1 from '@/public/images/ltf1.jpg';
+import Image2 from '@/public/images/ltf2.jpg';
+import Image3 from '@/public/images/ltf3.jpg';
+import Image4 from '@/public/images/ltf4.jpg';
 import Wrapper from '@/components/wrapper';
 import PillTags from '@/components/pill-tags';
 import TextAnimation from '@/components/text-animation';
 import FrameAnimation from '@/components/frame-animation';
 
 const content = {
+  headline: 'Loyal to Few®',
+  title: 'Full-Stack Web Developer, Designer',
+  from: '2022',
+  to: '2023',
+  subhead: 'Custom shopping experience for a boutique clothing manufacturer.',
+  body: 'Loyal To Few® is a family-owned business started by two brothers – the younger, a retired firefighter paramedic, and the older, a former troublemaker turned successful entrepreneur/businessman.  What began as a mindset turned into a tattoo, and evolved into a one-of-a-kind clothing brand that anyone who has overcome adversity can relate to.',
+  link: {
+    text: 'Product',
+    title: 'Learn more about Product',
+    href: '/product',
+  },
+  stack: [
+    'javascript',
+    'react js',
+    'next js',
+    'tailwindcss',
+    'node',
+    'mongodb',
+    'easypost api',
+    'snipcart api',
+    'sendgrid api',
+  ],
+  services: [
+    'web design',
+    'ux/ui',
+    'front-end engineering',
+    'back-end development',
+    'webhooks',
+    'apis',
+    'seo',
+  ],
+  images: [
+    { image: Image4, alt: 'Loyal to Few product page' },
+    { image: Image2, alt: 'Loyal to Few category page' },
+    { image: Image3, alt: 'Loyal to Few cart drawr' },
+    { image: Image1, alt: 'Loyal to Few sign up page' },
+  ],
+};
+const contentHL = {
   headline: 'HempLand® USA',
   title: 'Full-Stack Web Developer, Designer',
   from: '2015',
@@ -84,20 +128,42 @@ export default function HeroProductGallery() {
               </div>
               <FrameAnimation index={0} className='fade-up'>
                 <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
-                  <div className='aspect-video bg-gray-700 rounded-lg'></div>
+                  <div className='aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
+                    <Image
+                      src={content.images[0].image}
+                      alt={content.images[0].alt}
+                      placeholder='blur'
+                    />
+                  </div>
 
-                  <div className='aspect-video bg-gray-700 rounded-lg'></div>
+                  <div className='aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
+                    <Image
+                      src={content.images[1].image}
+                      alt={content.images[1].alt}
+                      placeholder='blur'
+                    />
+                  </div>
 
-                  <div className='col-span-2 md:col-auto aspect-video bg-gray-700 rounded-lg '></div>
+                  <div className='col-span-2 md:col-auto aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
+                    <Image
+                      src={content.images[2].image}
+                      alt={content.images[2].alt}
+                      placeholder='blur'
+                    />
+                  </div>
                 </div>
               </FrameAnimation>
             </div>
           </div>
         </div>
         <FrameAnimation index={0} className='fade-up'>
-          <div className='bg-gray-700 aspect-video rounded-lg overflow-hidden md:mt-4 hidden lg:block'>
+          <div className='bg-gray-700 aspect-video rounded-lg overflow-hidden md:mt-4 hidden lg:block shadow-[0_20px_80px_-20px_rgba(0,0,0,0.3)]'>
             <div className='w-full h-full flex items-center justify-center'>
-              <span>image</span>
+              <Image
+                src={content.images[3].image}
+                alt={content.images[3].alt}
+                placeholder='blur'
+              />
             </div>
           </div>
         </FrameAnimation>
