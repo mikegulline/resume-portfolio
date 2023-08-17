@@ -35,6 +35,56 @@ body {
     rgb(var(--background-start-rgb));
 } */
 
+.word {
+  position: relative;
+  display: inline-block;
+}
+
+.letter {
+  display: inline-block;
+  transform-origin: top;
+  visibility: hidden;
+  transform: translate3d(0, 100%, 0) rotateX(-90deg);
+}
+
+.inView .letter {
+  animation: letter__in 0.6s forwards calc(0.015s * var(--index));
+}
+
+@keyframes letter__in {
+  from {
+    visibility: visible;
+    transform: translate3d(0, 100%, 0%) rotateX(-90deg);
+    animation-timing-function: ease-in-out;
+  }
+
+  to {
+    visibility: visible;
+    transform: translate3d(0, 0%, 0) rotateX(0deg);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+.fade-up {
+  transform-origin: top;
+  transform: translate3d(0, 50%, 0);
+}
+
+.inView.fade-up {
+  animation: fade__up 0.6s forwards calc(0.05s * var(--index)) ease-out;
+}
+
+@keyframes fade__up {
+  from {
+    transform: translate3d(0, 50%, 0%);
+  }
+
+  to {
+    transform: translate3d(0, 0%, 0);
+  }
+}
+
+/* 
 .sentence {
   display: block;
 }
@@ -60,4 +110,4 @@ body {
   transition-delay: calc(0.03s * var(--index));
   transform: translate3d(0, 0%, 0) rotateX(0deg);
   visibility: visible;
-}
+} */

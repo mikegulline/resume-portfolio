@@ -20,8 +20,8 @@ export default function HeroUserProfile() {
     <section>
       <Wrapper>
         <div className='lg:columns-2 gap-10 xl:gap-20 py-10 md:py-14 xl:py-20'>
-          <div className='flex flex-col justify-between gap-2 xl:gap-4  lg:aspect-[4/3]'>
-            <h1 className='text-[10.3vw] lg:w-auto md:text-7xl lg:text-5xl xl:text-7xl leading-[1] md:leading-[1] lg:leading-[1] xl:leading-[1]  flex flex-col justify-center font-medium'>
+          <div className='flex flex-col justify-between gap-4 md:gap-6 xl:gap-8  lg:aspect-[4/3]'>
+            <h1 className='text-[10.3vw] lg:w-auto md:text-[5.8rem] lg:text-[3.6rem] xl:text-7xl leading-[1] md:leading-[1] lg:leading-[1] xl:leading-[1]  font-medium'>
               <TextAnimation text={content.headline} />
             </h1>
             <div className='grow '>

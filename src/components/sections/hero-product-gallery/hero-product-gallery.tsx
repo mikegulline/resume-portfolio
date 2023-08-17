@@ -1,6 +1,7 @@
 import Wrapper from '@/components/wrapper';
 import PillTags from '@/components/pill-tags';
 import TextAnimation from '@/components/text-animation';
+import FrameAnimation from '@/components/frame-animation';
 
 const content = {
   headline: 'HempLand® USA',
@@ -82,9 +83,15 @@ export default function HeroProductGallery() {
                 <p className='text-sm'>{content.body}</p>
               </div>
               <div className='md:columns-3 gap-4'>
-                <div className='aspect-video bg-gray-700 rounded-lg mb-4 md:mb-0'></div>
-                <div className='aspect-video bg-gray-700 rounded-lg mb-4 md:mb-0'></div>
-                <div className='aspect-video bg-gray-700 rounded-lg mb-4 md:mb-0'></div>
+                <FrameAnimation index={1} className='fade-up'>
+                  <div className='aspect-video bg-gray-700 rounded-lg mb-4 md:mb-0'></div>
+                </FrameAnimation>
+                <FrameAnimation index={2} className='fade-up'>
+                  <div className='aspect-video bg-gray-700 rounded-lg mb-4 md:mb-0'></div>
+                </FrameAnimation>
+                <FrameAnimation index={3} className='fade-up'>
+                  <div className='aspect-video bg-gray-700 rounded-lg mb-4 md:mb-0'></div>
+                </FrameAnimation>
               </div>
             </div>
           </div>
