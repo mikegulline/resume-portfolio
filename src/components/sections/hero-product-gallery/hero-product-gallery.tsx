@@ -1,5 +1,6 @@
 import Wrapper from '@/components/wrapper';
 import PillTags from '@/components/pill-tags';
+import TextAnimation from '@/components/text-animation';
 
 const content = {
   headline: 'HempLand® USA',
@@ -13,12 +14,10 @@ const content = {
     title: 'Learn more about Product',
     href: '/product',
   },
-
   stack: [
     'html',
     'css',
-    'less',
-    'sass',
+    'less/sass',
     'javascript',
     'php',
     'mysql',
@@ -44,7 +43,7 @@ export default function HeroProductGallery() {
     <section className='py-10 md:py-16 xl:py-32'>
       <Wrapper>
         <h1 className='font-medium text-[10.3vw]  md:text-7xl  xl:text-8xl mb-8 pb-4  md:mb-10 md:pb-5 lg:mb-14 lg:pb-8 xl:mb-20 xl:pb-10 border-b border-gray-400 border-dashed'>
-          Featured Project
+          <TextAnimation text='Featured Project' />
         </h1>
 
         <div className='lg:flex items-start relative lg:gap-14 xl:gap-32 lg:mb-14 xl:mb-20'>
@@ -78,7 +77,7 @@ export default function HeroProductGallery() {
             <div className='lg:w-[568px] xl:w-[700px] flex flex-col lg:h-[350px]'>
               <div className='grow  mb-8 lg:mb-0 lg:w-[520px] xl:w-[640px] '>
                 <h3 className='font-bold text-4xl lg:text-3xl xl:text-4xl mb-4'>
-                  {content.subhead}
+                  <TextAnimation text={content.subhead} />
                 </h3>
                 <p className='text-sm'>{content.body}</p>
               </div>
