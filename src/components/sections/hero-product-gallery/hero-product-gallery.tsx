@@ -43,7 +43,7 @@ export default function HeroProductGallery() {
   return (
     <section className='py-10 md:py-16 xl:py-32'>
       <Wrapper>
-        <h1 className='font-medium text-[10.3vw]  md:text-7xl  xl:text-8xl mb-10 pb-5  md:mb-10 md:pb-5 lg:mb-14 lg:pb-8 xl:mb-20 xl:pb-10 border-b border-gray-400 border-dashed'>
+        <h1 className='font-medium text-[10.3vw]  md:text-7xl  xl:text-8xl mb-8 pb-4  md:mb-10 md:pb-5 lg:mb-14 lg:pb-8 xl:mb-20 xl:pb-10 border-b border-gray-400 border-dashed'>
           Featured Project
         </h1>
 
@@ -61,7 +61,7 @@ export default function HeroProductGallery() {
               <span>{content.to}</span>
             </p>
             <div className='grow'></div>
-            <ul className='flex gap-5 lg:block mb-8 lg:mb-0'>
+            <ul className='flex gap-4 lg:block mb-8 lg:mb-0'>
               <li>
                 <div className='font-medium uppercase text-xs'>Services:</div>
                 <PillTags tags={content.services} />
