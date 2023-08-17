@@ -27,7 +27,7 @@ export default function HeroUserProfile() {
             <div className='grow '>
               <PillTags
                 tags={content.tags}
-                className='text-xs border-gray-600  hover:border-purple-600 hover:text-black hover:bg-purple-100'
+                className='text-xs border-gray-600  hover:border-purple-900/50 hover:text-black hover:bg-purple-200/70'
               />
             </div>
             <ul className='flex gap-8 border-t border-dashed border-gray-400 pt-5 mt-5'>
@@ -38,7 +38,7 @@ export default function HeroUserProfile() {
                   className='group'
                   title={content.link.title}
                 >
-                  <div className='flex items-center gap-2 text-sm md:text-base group-hover:text-purple-600'>
+                  <div className='flex items-center gap-2 text-sm md:text-base text-purple-900/70 group-hover:text-black'>
                     <span>{content.link.text}</span> <BsArrowUpRight />
                   </div>
                 </Link>

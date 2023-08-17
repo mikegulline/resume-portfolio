@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { IoLogoLinkedin, IoLogoGithub } from 'react-icons/io';
+import { IoLogoLinkedin, IoLogoGithub, IoMdMenu } from 'react-icons/io';
 
 //////////////
 //////////////
@@ -8,10 +8,10 @@ import { IoLogoLinkedin, IoLogoGithub } from 'react-icons/io';
 
 const linkStyles = {
   mainMenuLink:
-    'font-medium hover:text-purple-600 data-[ui=active]:underline data-[ui=active]:text-purple-600',
+    'font-medium hover:text-purple-900/70 data-[ui=active]:underline data-[ui=active]:text-purple-900/70',
   button:
-    'px-3 lg:px-5 h-10 lg:h-12 flex font-medium items-center justify-center bg-purple-100 border border-purple-600 text-purple-700 rounded-full data-[ui=active]:bg-purple-100 data-[ui=active]:text-purple-600 data-[ui=active]:border-purple-600 hover:bg-white hover:text-purple-600',
-  icon: 'flex items-center justify-center h-10 w-10 bg-white text-gray-700 border border-gray-300 rounded-full text-xl hover:bg-purple-600 hover:text-white hover:border-purple-600',
+    'h-10 w-10  flex md:hidden font-medium items-center justify-center bg-gray-200 border border-gray-700 text-gray-700 rounded-full data-[ui=active]:bg-gray-800 data-[ui=active]:text-white data-[ui=active]:border-gray-800 hover:bg-gray-800 hover:text-white',
+  icon: 'flex items-center justify-center h-10 w-10 bg-white text-gray-700 border border-gray-500 rounded-full text-xl hover:bg-purple-900/70 hover:text-white hover:border-purple-900/70',
 } as const;
 
 const { mainMenuLink, button, icon } = linkStyles;
@@ -50,6 +50,11 @@ export const mainMenu: MenuType = [
     href: '/resume',
     className: mainMenuLink,
   },
+  {
+    title: 'Contact',
+    href: '/contact',
+    className: mainMenuLink,
+  },
 ];
 
 export const secondaryMenu: MenuType = [
@@ -68,8 +73,9 @@ export const secondaryMenu: MenuType = [
     className: icon,
   },
   {
-    title: 'Contact',
-    href: '/contact',
+    title: 'Menu',
+    href: '/',
+    icon: IoMdMenu,
     className: button,
   },
 ];

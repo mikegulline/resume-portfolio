@@ -87,14 +87,14 @@ export default function HeroProductGallery() {
   return (
     <section className='py-10 md:py-16 xl:py-32 bg-gray-900 text-gray-300/50'>
       <Wrapper>
-        <h1 className='font-medium text-[10.3vw]  md:text-7xl  xl:text-8xl mb-8 pb-4  md:mb-10 md:pb-5 lg:mb-14 lg:pb-8 xl:mb-20 xl:pb-10 border-b border-gray-600 border-dashed text-white'>
+        <h1 className='font-medium text-[10.3vw]  md:text-7xl  xl:text-8xl mb-8 pb-4  md:mb-10 md:pb-5 lg:mb-14 lg:pb-8 xl:mb-20 xl:pb-10 border-b border-gray-400 border-dashed text-white'>
           <TextAnimation text='Featured Project' />
         </h1>
 
         <div className='lg:flex items-start relative lg:gap-14 xl:gap-32 lg:mb-14 xl:mb-20 '>
           <div className='lg:w-80 flex flex-col lg:h-[350px]'>
             <h1 className='text-lg font-medium flex'>
-              <div className='-ml-2 px-2 mt-[6px] bg-white text-black rounded-full mb-1'>
+              <div className='-ml-2 px-2 mt-[6px] bg-purple-300 text-black rounded-full mb-1'>
                 {content.headline}
               </div>
             </h1>
@@ -114,7 +114,7 @@ export default function HeroProductGallery() {
                 </div>
                 <PillTags
                   tags={content.services}
-                  className='text-xs border-gray-600 bg-gray-900  hover:border-purple-200 hover:text-black hover:bg-purple-200'
+                  className='text-xs border-gray-600 bg-gray-900  hover:border-purple-300 hover:text-black hover:bg-purple-300'
                 />
               </li>
               <li>
@@ -123,7 +123,7 @@ export default function HeroProductGallery() {
                 </div>
                 <PillTags
                   tags={content.stack}
-                  className='text-xs border-gray-600  hover:border-purple-600 hover:text-black hover:bg-purple-100'
+                  className='text-xs border-gray-600 bg-gray-900  hover:border-purple-300 hover:text-black hover:bg-purple-300'
                 />
               </li>
             </ul>
