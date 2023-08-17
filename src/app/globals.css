@@ -35,56 +35,29 @@ body {
     rgb(var(--background-start-rgb));
 } */
 
+.sentence {
+  display: block;
+}
+
 .word {
-  overflow: hidden;
   position: relative;
   display: inline-block;
   padding-bottom: 2%;
   margin-bottom: -2%;
-  /* transform-origin: top left;
-  transform: rotate(-10deg);
-  animation: word__in 0.6s forwards calc(0.03s * var(--index)); */
-}
-
-@keyframes word__in {
-  from {
-    transform: rotate(-10deg);
-    animation-timing-function: ease-in-out;
-  }
-
-  75% {
-    transform: rotate(5deg);
-    animation-timing-function: ease-in-out;
-  }
-
-  to {
-    transform: rotate(0deg);
-    animation-timing-function: ease-in-out;
-  }
 }
 
 .letter {
-  display: inline-block;
+  will-change: transform;
+  transform-style: perserve-3d;
   transform-origin: top;
   transform: translate3d(0, 100%, 0) rotateX(-90deg);
+  display: inline-block;
+  visibility: hidden;
 }
 
 .inView .letter {
-  animation: letter__in 0.6s forwards calc(0.015s * var(--index));
-}
-
-@keyframes letter__in {
-  from {
-    transform: translate3d(0, 100%, 100%) rotateX(-90deg);
-    animation-timing-function: ease-in-out;
-  }
-  50% {
-    transform: translate3d(0, 100%, 50%) rotateX(-30deg);
-    animation-timing-function: ease-in-out;
-  }
-
-  to {
-    transform: translate3d(0, 0%, 0) rotateX(0deg);
-    animation-timing-function: ease-in-out;
-  }
+  transition: 0.5s;
+  transition-delay: calc(0.03s * var(--index));
+  transform: translate3d(0, 0%, 0) rotateX(0deg);
+  visibility: visible;
 }

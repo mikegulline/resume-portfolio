@@ -35,5 +35,9 @@ export default function TextAnimation({ text }: TextAnimationProps) {
     </IndexWrap>
   ));
 
-  return <div ref={ref}>{newText}</div>;
+  return (
+    <div ref={ref} className='sentence'>
+      {newText}
+    </div>
+  );
 }

@@ -44,9 +44,6 @@ export default function HeroProductGallery() {
       <Wrapper>
         <h1 className='font-medium text-[10.3vw]  md:text-7xl  xl:text-8xl mb-8 pb-4  md:mb-10 md:pb-5 lg:mb-14 lg:pb-8 xl:mb-20 xl:pb-10 border-b border-gray-400 border-dashed'>
           <TextAnimation text='Featured Project' />
-          <div className=' absolute right-4 -mt-6 lg:right-14  lg:-mt-28 rotate-12 w-28 h-28 lg:w-40 lg:h-40 xl:w-48 xl:h-48 bg-purple-100 border border-purple-600 rounded-full text-base font-normal flex items-center justify-center shadow-[20px_40px_80px_-40px_rgba(0,0,0,0.4)]'>
-            <span>Very Impressive </span>
-          </div>
         </h1>
 
         <div className='lg:flex items-start relative lg:gap-14 xl:gap-32 lg:mb-14 xl:mb-20'>
