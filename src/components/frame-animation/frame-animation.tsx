@@ -31,8 +31,8 @@ export default function FrameAnimation({
   }, [ref, index]);
 
   return (
-    <div ref={ref} className={className}>
-      {children}
+    <div ref={ref}>
+      <span className={className}>{children}</span>
     </div>
   );
 }
