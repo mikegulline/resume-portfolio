@@ -25,7 +25,10 @@ export default function HeroUserProfile() {
               <TextAnimation text={content.headline} />
             </h1>
             <div className='grow '>
-              <PillTags tags={content.tags} />
+              <PillTags
+                tags={content.tags}
+                className='text-xs border-gray-600  hover:border-purple-600 hover:text-black hover:bg-purple-100'
+              />
             </div>
             <ul className='flex gap-8 border-t border-dashed border-gray-400 pt-5 mt-5'>
               <li className='flex grow items-start'>
