@@ -83,25 +83,26 @@ export default function HeroProductGallery() {
                 <p className='text-sm'>{content.body}</p>
               </div>
               <div className='md:columns-3 gap-4'>
+                <FrameAnimation index={0} className='fade-up'>
+                  <div className='aspect-video bg-gray-700 rounded-lg mb-4 md:mb-0'></div>
+                </FrameAnimation>
                 <FrameAnimation index={1} className='fade-up'>
                   <div className='aspect-video bg-gray-700 rounded-lg mb-4 md:mb-0'></div>
                 </FrameAnimation>
                 <FrameAnimation index={2} className='fade-up'>
                   <div className='aspect-video bg-gray-700 rounded-lg mb-4 md:mb-0'></div>
                 </FrameAnimation>
-                <FrameAnimation index={3} className='fade-up'>
-                  <div className='aspect-video bg-gray-700 rounded-lg mb-4 md:mb-0'></div>
-                </FrameAnimation>
               </div>
             </div>
           </div>
         </div>
-
-        <div className='bg-gray-700 aspect-video rounded-lg overflow-hidden md:mt-4'>
-          <div className='w-full h-full flex items-center justify-center'>
-            <span>image</span>
+        <FrameAnimation index={0} className='fade-up'>
+          <div className='bg-gray-700 aspect-video rounded-lg overflow-hidden md:mt-4'>
+            <div className='w-full h-full flex items-center justify-center'>
+              <span>image</span>
+            </div>
           </div>
-        </div>
+        </FrameAnimation>
       </Wrapper>
     </section>
   );

@@ -67,7 +67,7 @@ body {
 
 .fade-up {
   transform-origin: top;
-  transform: translate3d(0, 50%, 0);
+  transform: translate3d(0, 20px, 0);
 }
 
 .inView.fade-up {
@@ -76,7 +76,7 @@ body {
 
 @keyframes fade__up {
   from {
-    transform: translate3d(0, 50%, 0%);
+    transform: translate3d(0, 40px, 0%);
   }
 
   to {
