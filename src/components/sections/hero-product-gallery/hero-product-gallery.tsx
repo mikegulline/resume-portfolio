@@ -14,7 +14,7 @@ const content = {
   from: '2022',
   to: '2023',
   subhead: 'Custom shopping experience for a boutique clothing manufacturer.',
-  body: 'Loyal To Few® is a family-owned business started by two brothers – the younger, a retired firefighter paramedic, and the older, a former troublemaker turned successful entrepreneur/businessman.  What began as a mindset turned into a tattoo, and evolved into a one-of-a-kind clothing brand that anyone who has overcome adversity can relate to.',
+  body: `Loyal to Few® was fresh. They came to me with some logos, t-shirts, hoodies and that was it. They were ready to start selling online! I gave them a few options, Wordpress with Woocommerce, Shopify, or a custom site with a headless shopping cart.  The result was a blazing fast and easy to maintain React JS website built on top of Next JS for routing, SSR, SEO, APIs, webhooks, lazy loading and image optimization. Combined with SnipCart headless shopping cart they had everything they needed to get started.`,
   link: {
     text: 'Product',
     title: 'Learn more about Product',
@@ -115,7 +115,7 @@ type HeroProductGalleryProps = typeof content;
 //                 </div>
 //                 <PillTags
 //                   tags={content.services}
-//                   className='text-xs border-gray-600 bg-gray-900  hover:border-purple-300 hover:text-black hover:bg-purple-300'
+//                   className='text-xs border-gray-800 bg-gray-900  hover:border-purple-300 hover:text-black hover:bg-purple-300'
 //                 />
 //               </li>
 //               <li>
@@ -124,13 +124,13 @@ type HeroProductGalleryProps = typeof content;
 //                 </div>
 //                 <PillTags
 //                   tags={content.stack}
-//                   className='text-xs border-gray-600 bg-gray-900  hover:border-purple-300 hover:text-black hover:bg-purple-300'
+//                   className='text-xs border-gray-800 bg-gray-900  hover:border-purple-300 hover:text-black hover:bg-purple-300'
 //                 />
 //               </li>
 //             </ul>
 //           </div>
 //           <div className='grow lg:mb-0'>
-//             <div className='lg:w-[568px] xl:w-[700px] flex flex-col lg:h-[400px]'>
+//             <div className='lg:w-[568px] xl:w-[800px] flex flex-col lg:h-[400px]'>
 //               <div className='grow  mb-8 lg:mb-0 lg:w-[520px] xl:w-[640px] '>
 //                 <h3 className='font-bold text-4xl lg:text-3xl xl:text-4xl mb-4 text-white'>
 //                   <TextAnimation text={content.subhead} />
@@ -139,7 +139,7 @@ type HeroProductGalleryProps = typeof content;
 //               </div>
 //               <FrameAnimation index={0} className='fade-up'>
 //                 <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
-//                   <div className='aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
+//                   <div className='aspect-video bg-gray-800 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
 //                     <Image
 //                       src={content.images[0].image}
 //                       alt={content.images[0].alt}
@@ -147,7 +147,7 @@ type HeroProductGalleryProps = typeof content;
 //                     />
 //                   </div>
 
-//                   <div className='aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
+//                   <div className='aspect-video bg-gray-800 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
 //                     <Image
 //                       src={content.images[1].image}
 //                       alt={content.images[1].alt}
@@ -155,7 +155,7 @@ type HeroProductGalleryProps = typeof content;
 //                     />
 //                   </div>
 
-//                   <div className='col-span-2 md:col-auto aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
+//                   <div className='col-span-2 md:col-auto aspect-video bg-gray-800 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
 //                     <Image
 //                       src={content.images[2].image}
 //                       alt={content.images[2].alt}
@@ -168,7 +168,7 @@ type HeroProductGalleryProps = typeof content;
 //           </div>
 //         </div>
 //         <FrameAnimation index={0} className='fade-up'>
-//           <div className='bg-gray-700 aspect-video rounded-lg overflow-hidden md:mt-4 hidden lg:block shadow-[0_20px_80px_-20px_rgba(0,0,0,0.3)]'>
+//           <div className='bg-gray-800 aspect-video rounded-lg overflow-hidden md:mt-4 hidden lg:block shadow-[0_20px_80px_-20px_rgba(0,0,0,0.3)]'>
 //             <div className='w-full h-full flex items-center justify-center'>
 //               <Image
 //                 src={content.images[3].image}
@@ -185,9 +185,9 @@ type HeroProductGalleryProps = typeof content;
 
 export default function HeroProductGallery() {
   return (
-    <section className='py-10 md:py-16 xl:py-32 bg-white'>
+    <section className='py-10 md:py-16 xl:py-32 bg-static'>
       <Wrapper>
-        <h1 className='font-medium text-[10.3vw]  md:text-7xl  xl:text-8xl mb-8 pb-4  md:mb-10 md:pb-5 lg:mb-14 lg:pb-8 xl:mb-20 xl:pb-10 border-b border-gray-400 border-dashed'>
+        <h1 className='font-medium text-[10.3vw]  md:text-7xl  xl:text-8xl mb-8 pb-4  md:mb-10 md:pb-5 lg:mb-14 lg:pb-8 xl:mb-20 xl:pb-10 border-b border-gray-800'>
           <TextAnimation text='Featured Project' />
         </h1>
 
@@ -201,7 +201,7 @@ export default function HeroProductGallery() {
             <p className='text-sm mb-1 font-medium'>{content.title}</p>
             <p className='text-xs mb-8 lg:mb-1 flex items-center gap-1'>
               <span>{content.from}</span>
-              <span className='grow border-b border-gray-400 mt-[2px]'></span>
+              <span className='grow border-b border-gray-800 mt-[2px]'></span>
               <span>{content.to}</span>
             </p>
             <div className='grow'></div>
@@ -210,7 +210,7 @@ export default function HeroProductGallery() {
                 <div className='font-medium uppercase text-xs'>Services:</div>
                 <PillTags
                   tags={content.services}
-                  className='text-xs border-gray-600  hover:border-purple-900/50 hover:text-black hover:bg-purple-200/70'
+                  className='text-xs border-gray-800 bg-white  hover:border-purple-900/50 hover:text-black hover:bg-purple-200/70'
                 />
               </li>
               <li>
@@ -219,13 +219,13 @@ export default function HeroProductGallery() {
                 </div>
                 <PillTags
                   tags={content.stack}
-                  className='text-xs border-gray-600  hover:border-purple-900/50 hover:text-black hover:bg-purple-200/70'
+                  className='text-xs border-gray-800 bg-white hover:border-purple-900/50 hover:text-black hover:bg-purple-200/70'
                 />
               </li>
             </ul>
           </div>
           <div className='grow lg:mb-0'>
-            <div className='lg:w-[568px] xl:w-[700px] flex flex-col lg:h-[400px]'>
+            <div className='lg:w-[568px] xl:w-[800px] flex flex-col lg:h-[400px]'>
               <div className='grow  mb-8 lg:mb-0 lg:w-[520px] xl:w-[640px] '>
                 <h3 className='font-bold text-4xl lg:text-3xl xl:text-4xl mb-4'>
                   <TextAnimation text={content.subhead} />
@@ -234,7 +234,7 @@ export default function HeroProductGallery() {
               </div>
               <FrameAnimation index={0} className='fade-up'>
                 <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
-                  <div className='aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
+                  <div className='aspect-video bg-gray-800 border border-gray-800 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
                     <Image
                       src={content.images[0].image}
                       alt={content.images[0].alt}
@@ -242,7 +242,7 @@ export default function HeroProductGallery() {
                     />
                   </div>
 
-                  <div className='aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
+                  <div className='aspect-video bg-gray-800 border border-gray-800 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
                     <Image
                       src={content.images[1].image}
                       alt={content.images[1].alt}
@@ -250,7 +250,7 @@ export default function HeroProductGallery() {
                     />
                   </div>
 
-                  <div className='col-span-2 md:col-auto aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
+                  <div className='col-span-2 md:col-auto aspect-video border border-gray-800 bg-gray-800 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
                     <Image
                       src={content.images[2].image}
                       alt={content.images[2].alt}
@@ -263,7 +263,7 @@ export default function HeroProductGallery() {
           </div>
         </div>
         <FrameAnimation index={0} className='fade-up'>
-          <div className='bg-gray-700 aspect-video rounded-lg overflow-hidden md:mt-4 hidden lg:block shadow-[0_20px_80px_-20px_rgba(0,0,0,0.3)]'>
+          <div className='bg-gray-800 aspect-video border border-gray-800 rounded-lg overflow-hidden md:mt-4 hidden lg:block shadow-[0_20px_80px_-20px_rgba(0,0,0,0.3)]'>
             <div className='w-full h-full flex items-center justify-center'>
               <Image
                 src={content.images[3].image}

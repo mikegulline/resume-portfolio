@@ -11,6 +11,13 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+.bg-static {
+  background-image: url('/images/static.png');
+  background-size: 128px 128px;
+  background-color: #f8f5ec;
+  background-attachment: fixed;
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

@@ -20,7 +20,7 @@ const content = {
 
 export default function HeroUserProfile() {
   return (
-    <section>
+    <section className='bg-static'>
       <Wrapper>
         <div className='lg:columns-2 gap-10 xl:gap-20 py-10 md:py-20 xl:py-32'>
           <div className='flex flex-col justify-between gap-4 md:gap-6 xl:gap-8  lg:aspect-[4/3]'>
@@ -30,10 +30,10 @@ export default function HeroUserProfile() {
             <div className='grow '>
               <PillTags
                 tags={content.tags}
-                className='text-xs border-gray-600  hover:border-purple-900/50 hover:text-black hover:bg-purple-200/70'
+                className='text-xs border-gray-800 bg-white  hover:border-purple-900/50 hover:text-black hover:bg-purple-200/70'
               />
             </div>
-            <ul className='flex gap-8 border-t border-dashed border-gray-400 pt-5 mt-5'>
+            <ul className='flex gap-8 border-t  border-gray-800 pt-5 mt-5'>
               <li className='flex grow items-start'>
                 <Link
                   href={content.link.href}
@@ -50,8 +50,8 @@ export default function HeroUserProfile() {
             </ul>
           </div>
 
-          <div className='relative rounded-lg overflow-hidden mt-10 lg:mt-0'>
-            <div className='bg-gray-800 aspect-[4/3]'>
+          <div className='border border-gray-800 bg-white p-2 rounded-lg overflow-hidden mt-10 lg:mt-0'>
+            <div className='bg-gray-800 relative aspect-[4/3] border border-gray-800 rounded overflow-hidden'>
               <Image src={ProfilePic} alt='Mike Gulline' placeholder='blur' />
               <div className='absolute right-5 bottom-5 z-10'>
                 <ul className='rounded-full backdrop-blur-sm bg-white/30 p-1 flex gap-2 items-center'>
