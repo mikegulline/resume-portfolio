@@ -75,20 +75,27 @@ body {
 .fade-up {
   transform-origin: top;
   transform: translate3d(0, 40px, 0);
+  visibility: hidden;
+  display: block;
 }
 
 .inView .fade-up {
-  display: block;
+  visibility: visible;
   animation: fade_up 1.6s forwards calc(0.05s * var(--index)) ease-out;
 }
 
 @keyframes fade_up {
   from {
     transform: translate3d(0, 40px, 0%);
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
   }
 
   to {
     transform: translate3d(0, 0px, 0);
+    opacity: 1;
   }
 }
 

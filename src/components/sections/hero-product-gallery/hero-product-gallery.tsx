@@ -139,7 +139,7 @@ type HeroProductGalleryProps = typeof content;
 //               </div>
 //               <FrameAnimation index={0} className='fade-up'>
 //                 <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
-//                   <div className='aspect-video bg-gray-800 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
+//                   <div className='aspect-video bg-gray-800 rounded-lg overflow-hidden'>
 //                     <Image
 //                       src={content.images[0].image}
 //                       alt={content.images[0].alt}
@@ -147,7 +147,7 @@ type HeroProductGalleryProps = typeof content;
 //                     />
 //                   </div>
 
-//                   <div className='aspect-video bg-gray-800 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
+//                   <div className='aspect-video bg-gray-800 rounded-lg overflow-hidden'>
 //                     <Image
 //                       src={content.images[1].image}
 //                       alt={content.images[1].alt}
@@ -155,7 +155,7 @@ type HeroProductGalleryProps = typeof content;
 //                     />
 //                   </div>
 
-//                   <div className='col-span-2 md:col-auto aspect-video bg-gray-800 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
+//                   <div className='col-span-2 md:col-auto aspect-video bg-gray-800 rounded-lg overflow-hidden'>
 //                     <Image
 //                       src={content.images[2].image}
 //                       alt={content.images[2].alt}
@@ -232,38 +232,41 @@ export default function HeroProductGallery() {
                 </h3>
                 <p className='text-sm'>{content.body}</p>
               </div>
-              <FrameAnimation index={0} className='fade-up'>
-                <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
-                  <div className='aspect-video bg-gray-800 border border-gray-800 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
+
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+                <FrameAnimation index={0} className='fade-up'>
+                  <div className='aspect-video bg-gray-800 border border-gray-800 rounded-lg overflow-hidden'>
                     <Image
                       src={content.images[0].image}
                       alt={content.images[0].alt}
                       placeholder='blur'
                     />
                   </div>
-
-                  <div className='aspect-video bg-gray-800 border border-gray-800 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
+                </FrameAnimation>
+                <FrameAnimation index={0} className='fade-up'>
+                  <div className='aspect-video bg-gray-800 border border-gray-800 rounded-lg overflow-hidden'>
                     <Image
                       src={content.images[1].image}
                       alt={content.images[1].alt}
                       placeholder='blur'
                     />
                   </div>
-
-                  <div className='col-span-2 md:col-auto aspect-video border border-gray-800 bg-gray-800 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
+                </FrameAnimation>
+                <FrameAnimation index={0} className='fade-up'>
+                  <div className='aspect-video border border-gray-800 bg-gray-800 rounded-lg overflow-hidden'>
                     <Image
                       src={content.images[2].image}
                       alt={content.images[2].alt}
                       placeholder='blur'
                     />
                   </div>
-                </div>
-              </FrameAnimation>
+                </FrameAnimation>
+              </div>
             </div>
           </div>
         </div>
         <FrameAnimation index={0} className='fade-up'>
-          <div className='bg-gray-800 aspect-video border border-gray-800 rounded-lg overflow-hidden md:mt-4 hidden lg:block shadow-[0_20px_80px_-20px_rgba(0,0,0,0.3)]'>
+          <div className='bg-gray-800 aspect-video border border-gray-800 rounded-lg overflow-hidden md:mt-4 hidden lg:block '>
             <div className='w-full h-full flex items-center justify-center'>
               <Image
                 src={content.images[3].image}
