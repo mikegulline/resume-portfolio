@@ -10,7 +10,7 @@ import FrameAnimation from '@/components/frame-animation';
 
 const content = {
   headline: 'Loyal to Few®',
-  title: 'Full-Stack Web Developer, Designer',
+  title: 'Full-Stack Web Engineer, Designer',
   from: '2022',
   to: '2023',
   subhead: 'Custom shopping experience for a boutique clothing manufacturer.',
@@ -22,8 +22,8 @@ const content = {
   },
   stack: [
     'javascript',
-    'react js',
-    'next js',
+    'react',
+    'next',
     'tailwindcss',
     'node',
     'mongodb',
@@ -36,9 +36,10 @@ const content = {
     'ux/ui',
     'front-end engineering',
     'back-end development',
-    'webhooks',
     'apis',
+    'webhooks',
     'seo',
+    'shipping automation',
   ],
   images: [
     { image: Image4, alt: 'Loyal to Few product page' },

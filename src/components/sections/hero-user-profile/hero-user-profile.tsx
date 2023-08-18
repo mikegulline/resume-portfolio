@@ -1,17 +1,20 @@
 import Wrapper from '@/components/wrapper';
 import Link from 'next/link';
+import Image from 'next/image';
 import { BsArrowUpRight } from 'react-icons/bs';
 import TextAnimation from '@/components/text-animation';
 import PillTags from '@/components/pill-tags';
+import ProfilePic from '@/public/images/mike-gulline.jpg';
 
+// Professional Full-Stack Web Development.
 const content = {
-  headline: 'Professional Full-Stack Web Development.',
+  headline: 'Creative Full-Stack Web Engineer.',
   tags: ['Design', 'Develop', 'Deploy'],
   link: {
     text: '@mikegulline',
     title: "Let's connect on LinkedIn",
     href: 'https://www.linkedin.com/in/mikegulline/',
-    body: "If you like what you see, let's connect! You can find me reluctently on LinkedIn.",
+    body: "If you like what you see, let's connect! You can find me reluctently 😜 on LinkedIn.",
   },
 };
 
@@ -49,14 +52,15 @@ export default function HeroUserProfile() {
 
           <div className='relative rounded-lg overflow-hidden mt-10 lg:mt-0'>
             <div className='bg-gray-800 aspect-[4/3]'>
+              <Image src={ProfilePic} alt='Mike Gulline' placeholder='blur' />
               <div className='absolute right-5 bottom-5 z-10'>
                 <ul className='rounded-full backdrop-blur-sm bg-white/30 p-1 flex gap-2 items-center'>
                   <li>
-                    <div className='rounded-full bg-gray-800 text-gray-400 w-10 h-10 flex justify-center items-center'>
+                    <div className='rounded-full bg-gray-800 text-white w-10 h-10 flex justify-center items-center'>
                       <span className='rotate-90'>:)</span>
                     </div>
                   </li>
-                  <li className='pr-10'>hello</li>
+                  <li className='pr-10'>Hello! My name is Mike.</li>
                 </ul>
               </div>
             </div>
