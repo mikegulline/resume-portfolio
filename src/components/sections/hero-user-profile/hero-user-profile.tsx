@@ -19,7 +19,7 @@ export default function HeroUserProfile() {
   return (
     <section>
       <Wrapper>
-        <div className='lg:columns-2 gap-10 xl:gap-20 py-10 md:py-14 xl:py-20'>
+        <div className='lg:columns-2 gap-10 xl:gap-20 py-10 md:py-20 xl:py-32'>
           <div className='flex flex-col justify-between gap-4 md:gap-6 xl:gap-8  lg:aspect-[4/3]'>
             <h1 className='text-[10.3vw] lg:w-auto md:text-[5.8rem] lg:text-[3.6rem] xl:text-7xl leading-[1] md:leading-[1] lg:leading-[1] xl:leading-[1]  font-medium'>
               <TextAnimation text={content.headline} />
@@ -48,7 +48,7 @@ export default function HeroUserProfile() {
           </div>
 
           <div className='relative rounded-lg overflow-hidden mt-10 lg:mt-0'>
-            <div className='bg-gray-700 aspect-[4/3]'>
+            <div className='bg-gray-800 aspect-[4/3]'>
               <div className='absolute right-5 bottom-5 z-10'>
                 <ul className='rounded-full backdrop-blur-sm bg-white/30 p-1 flex gap-2 items-center'>
                   <li>

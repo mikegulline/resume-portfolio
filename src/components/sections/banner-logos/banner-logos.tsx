@@ -1,14 +1,12 @@
-import Wrapper from '@/components/wrapper';
 import Pan from '@/components/pan';
 
 export default function BannerLogos() {
   return (
     <div className='bg-white border-t border-gray-800 text-gray-800 py-10 w-full overflow-hidden'>
-      <div className='flex whitespace-nowrap items-center text-2xl font-medium'>
+      <div className='flex whitespace-nowrap items-center text-xl '>
         <Pan>
           <>
             {[
-              'Mike Gulline',
               'JavaScript',
               'TypeScript',
               'React',

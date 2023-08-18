@@ -138,7 +138,7 @@ export default function HeroProductGallery() {
               </div>
               <FrameAnimation index={0} className='fade-up'>
                 <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
-                  <div className='aspect-video border border-gray-100 bg-gray-700 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
+                  <div className='aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
                     <Image
                       src={content.images[0].image}
                       alt={content.images[0].alt}
@@ -146,7 +146,7 @@ export default function HeroProductGallery() {
                     />
                   </div>
 
-                  <div className='aspect-video border border-gray-100 bg-gray-700 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
+                  <div className='aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
                     <Image
                       src={content.images[1].image}
                       alt={content.images[1].alt}
@@ -154,7 +154,7 @@ export default function HeroProductGallery() {
                     />
                   </div>
 
-                  <div className='col-span-2 md:col-auto aspect-video border border-gray-100 bg-gray-700 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
+                  <div className='col-span-2 md:col-auto aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
                     <Image
                       src={content.images[2].image}
                       alt={content.images[2].alt}
@@ -167,7 +167,7 @@ export default function HeroProductGallery() {
           </div>
         </div>
         <FrameAnimation index={0} className='fade-up'>
-          <div className='bg-gray-700 aspect-video border border-gray-100 rounded-lg overflow-hidden md:mt-4 hidden lg:block shadow-[0_20px_80px_-20px_rgba(0,0,0,0.3)]'>
+          <div className='bg-gray-700 aspect-video rounded-lg overflow-hidden md:mt-4 hidden lg:block shadow-[0_20px_80px_-20px_rgba(0,0,0,0.3)]'>
             <div className='w-full h-full flex items-center justify-center'>
               <Image
                 src={content.images[3].image}
