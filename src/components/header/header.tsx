@@ -9,7 +9,7 @@ type HeaderProps = {
 
 export default function Header() {
   const Container = ({ children }: HeaderProps) => (
-    <div className='border-b border-gray-200'>
+    <div className='border-b border-gray-800'>
       <Wrapper full>
         <div className='flex justify-between items-center gap-5 h-16 lg:h-20'>
           {children}
@@ -19,7 +19,7 @@ export default function Header() {
   );
 
   const MainMenu = () => {
-    const passUlClassName = 'flex gap-8 items-center';
+    const passUlClassName = 'flex gap-1 items-center';
     return (
       <nav aria-label='Main menu' className='md:flex grow justify-end hidden'>
         <MenuLinks menu={mainMenu} className={passUlClassName} />

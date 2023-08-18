@@ -83,121 +83,24 @@ const contentHL = {
 
 type HeroProductGalleryProps = typeof content;
 
-export default function HeroProductGallery() {
-  return (
-    <section className='py-10 md:py-16 xl:py-32 bg-gray-900 text-gray-300/50'>
-      <Wrapper>
-        <h1 className='font-medium text-[10.3vw]  md:text-7xl  xl:text-8xl mb-8 pb-4  md:mb-10 md:pb-5 lg:mb-14 lg:pb-8 xl:mb-20 xl:pb-10 border-b border-gray-400 border-dashed text-white'>
-          <TextAnimation text='Featured Project' />
-        </h1>
-
-        <div className='lg:flex items-start relative lg:gap-14 xl:gap-32 lg:mb-14 xl:mb-20 '>
-          <div className='lg:w-80 flex flex-col lg:h-[350px]'>
-            <h1 className='text-lg font-medium flex'>
-              <div className='-ml-2 px-2 mt-[6px] bg-purple-300 text-black rounded-full mb-1'>
-                {content.headline}
-              </div>
-            </h1>
-            <p className='text-sm mb-1 font-medium text-gray-300'>
-              {content.title}
-            </p>
-            <p className='text-xs mb-8 lg:mb-1 flex items-center gap-1'>
-              <span>{content.from}</span>
-              <span className='grow border-b border-gray-400 mt-[2px]'></span>
-              <span>{content.to}</span>
-            </p>
-            <div className='grow'></div>
-            <ul className='flex gap-4 lg:block mb-8 lg:mb-0'>
-              <li>
-                <div className='font-medium uppercase text-xs text-gray-300'>
-                  Services:
-                </div>
-                <PillTags
-                  tags={content.services}
-                  className='text-xs border-gray-600 bg-gray-900  hover:border-purple-300 hover:text-black hover:bg-purple-300'
-                />
-              </li>
-              <li>
-                <div className='font-medium uppercase text-xs lg:mt-4 text-gray-300'>
-                  Stack:
-                </div>
-                <PillTags
-                  tags={content.stack}
-                  className='text-xs border-gray-600 bg-gray-900  hover:border-purple-300 hover:text-black hover:bg-purple-300'
-                />
-              </li>
-            </ul>
-          </div>
-          <div className='grow lg:mb-0'>
-            <div className='lg:w-[568px] xl:w-[700px] flex flex-col lg:h-[350px]'>
-              <div className='grow  mb-8 lg:mb-0 lg:w-[520px] xl:w-[640px] '>
-                <h3 className='font-bold text-4xl lg:text-3xl xl:text-4xl mb-4 text-white'>
-                  <TextAnimation text={content.subhead} />
-                </h3>
-                <p className='text-sm'>{content.body}</p>
-              </div>
-              <FrameAnimation index={0} className='fade-up'>
-                <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
-                  <div className='aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
-                    <Image
-                      src={content.images[0].image}
-                      alt={content.images[0].alt}
-                      placeholder='blur'
-                    />
-                  </div>
-
-                  <div className='aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
-                    <Image
-                      src={content.images[1].image}
-                      alt={content.images[1].alt}
-                      placeholder='blur'
-                    />
-                  </div>
-
-                  <div className='col-span-2 md:col-auto aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
-                    <Image
-                      src={content.images[2].image}
-                      alt={content.images[2].alt}
-                      placeholder='blur'
-                    />
-                  </div>
-                </div>
-              </FrameAnimation>
-            </div>
-          </div>
-        </div>
-        <FrameAnimation index={0} className='fade-up'>
-          <div className='bg-gray-700 aspect-video rounded-lg overflow-hidden md:mt-4 hidden lg:block shadow-[0_20px_80px_-20px_rgba(0,0,0,0.3)]'>
-            <div className='w-full h-full flex items-center justify-center'>
-              <Image
-                src={content.images[3].image}
-                alt={content.images[3].alt}
-                placeholder='blur'
-              />
-            </div>
-          </div>
-        </FrameAnimation>
-      </Wrapper>
-    </section>
-  );
-}
-
 // export default function HeroProductGallery() {
 //   return (
-//     <section className='py-10 md:py-16 xl:py-32 bg-white'>
+//     <section className='py-10 md:py-16 xl:py-32 bg-gray-900 text-gray-300/50'>
 //       <Wrapper>
-//         <h1 className='font-medium text-[10.3vw]  md:text-7xl  xl:text-8xl mb-8 pb-4  md:mb-10 md:pb-5 lg:mb-14 lg:pb-8 xl:mb-20 xl:pb-10 border-b border-gray-400 border-dashed'>
+//         <h1 className='font-medium text-[10.3vw]  md:text-7xl  xl:text-8xl mb-8 pb-4  md:mb-10 md:pb-5 lg:mb-14 lg:pb-8 xl:mb-20 xl:pb-10 border-b border-gray-400 border-dashed text-white'>
 //           <TextAnimation text='Featured Project' />
 //         </h1>
 
-//         <div className='lg:flex items-start relative lg:gap-14 xl:gap-32 lg:mb-14 xl:mb-20'>
-//           <div className='lg:w-80 flex flex-col lg:h-[350px]'>
+//         <div className='lg:flex items-start relative lg:gap-14 xl:gap-32 lg:mb-14 xl:mb-20 '>
+//           <div className='lg:w-80 flex flex-col lg:h-[400px]'>
 //             <h1 className='text-lg font-medium flex'>
-//               <div className='-ml-2 px-2 mt-[6px] bg-purple-100 rounded mb-1'>
+//               <div className='-ml-2 px-2 mt-[6px] bg-purple-300 text-black rounded-full mb-1'>
 //                 {content.headline}
 //               </div>
 //             </h1>
-//             <p className='text-sm mb-1 font-medium'>{content.title}</p>
+//             <p className='text-sm mb-1 font-medium text-gray-300'>
+//               {content.title}
+//             </p>
 //             <p className='text-xs mb-8 lg:mb-1 flex items-center gap-1'>
 //               <span>{content.from}</span>
 //               <span className='grow border-b border-gray-400 mt-[2px]'></span>
@@ -206,21 +109,29 @@ export default function HeroProductGallery() {
 //             <div className='grow'></div>
 //             <ul className='flex gap-4 lg:block mb-8 lg:mb-0'>
 //               <li>
-//                 <div className='font-medium uppercase text-xs'>Services:</div>
-//                 <PillTags tags={content.services} />
+//                 <div className='font-medium uppercase text-xs text-gray-300'>
+//                   Services:
+//                 </div>
+//                 <PillTags
+//                   tags={content.services}
+//                   className='text-xs border-gray-600 bg-gray-900  hover:border-purple-300 hover:text-black hover:bg-purple-300'
+//                 />
 //               </li>
 //               <li>
-//                 <div className='font-medium uppercase text-xs lg:mt-4'>
+//                 <div className='font-medium uppercase text-xs lg:mt-4 text-gray-300'>
 //                   Stack:
 //                 </div>
-//                 <PillTags tags={content.stack} />
+//                 <PillTags
+//                   tags={content.stack}
+//                   className='text-xs border-gray-600 bg-gray-900  hover:border-purple-300 hover:text-black hover:bg-purple-300'
+//                 />
 //               </li>
 //             </ul>
 //           </div>
 //           <div className='grow lg:mb-0'>
-//             <div className='lg:w-[568px] xl:w-[700px] flex flex-col lg:h-[350px]'>
+//             <div className='lg:w-[568px] xl:w-[700px] flex flex-col lg:h-[400px]'>
 //               <div className='grow  mb-8 lg:mb-0 lg:w-[520px] xl:w-[640px] '>
-//                 <h3 className='font-bold text-4xl lg:text-3xl xl:text-4xl mb-4'>
+//                 <h3 className='font-bold text-4xl lg:text-3xl xl:text-4xl mb-4 text-white'>
 //                   <TextAnimation text={content.subhead} />
 //                 </h3>
 //                 <p className='text-sm'>{content.body}</p>
@@ -270,3 +181,98 @@ export default function HeroProductGallery() {
 //     </section>
 //   );
 // }
+
+export default function HeroProductGallery() {
+  return (
+    <section className='py-10 md:py-16 xl:py-32 bg-white'>
+      <Wrapper>
+        <h1 className='font-medium text-[10.3vw]  md:text-7xl  xl:text-8xl mb-8 pb-4  md:mb-10 md:pb-5 lg:mb-14 lg:pb-8 xl:mb-20 xl:pb-10 border-b border-gray-400 border-dashed'>
+          <TextAnimation text='Featured Project' />
+        </h1>
+
+        <div className='lg:flex items-start relative lg:gap-14 xl:gap-32 lg:mb-14 xl:mb-20'>
+          <div className='lg:w-80 flex flex-col lg:h-[400px]'>
+            <h1 className='text-lg font-medium flex'>
+              <div className='-ml-3 px-3 py-1 mt-[6px] bg-purple-100 border border-purple-900/50 rounded-full mb-2'>
+                {content.headline}
+              </div>
+            </h1>
+            <p className='text-sm mb-1 font-medium'>{content.title}</p>
+            <p className='text-xs mb-8 lg:mb-1 flex items-center gap-1'>
+              <span>{content.from}</span>
+              <span className='grow border-b border-gray-400 mt-[2px]'></span>
+              <span>{content.to}</span>
+            </p>
+            <div className='grow'></div>
+            <ul className='flex gap-4 lg:block mb-8 lg:mb-0'>
+              <li>
+                <div className='font-medium uppercase text-xs'>Services:</div>
+                <PillTags
+                  tags={content.services}
+                  className='text-xs border-gray-600  hover:border-purple-900/50 hover:text-black hover:bg-purple-200/70'
+                />
+              </li>
+              <li>
+                <div className='font-medium uppercase text-xs lg:mt-4'>
+                  Stack:
+                </div>
+                <PillTags
+                  tags={content.stack}
+                  className='text-xs border-gray-600  hover:border-purple-900/50 hover:text-black hover:bg-purple-200/70'
+                />
+              </li>
+            </ul>
+          </div>
+          <div className='grow lg:mb-0'>
+            <div className='lg:w-[568px] xl:w-[700px] flex flex-col lg:h-[400px]'>
+              <div className='grow  mb-8 lg:mb-0 lg:w-[520px] xl:w-[640px] '>
+                <h3 className='font-bold text-4xl lg:text-3xl xl:text-4xl mb-4'>
+                  <TextAnimation text={content.subhead} />
+                </h3>
+                <p className='text-sm'>{content.body}</p>
+              </div>
+              <FrameAnimation index={0} className='fade-up'>
+                <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
+                  <div className='aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
+                    <Image
+                      src={content.images[0].image}
+                      alt={content.images[0].alt}
+                      placeholder='blur'
+                    />
+                  </div>
+
+                  <div className='aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
+                    <Image
+                      src={content.images[1].image}
+                      alt={content.images[1].alt}
+                      placeholder='blur'
+                    />
+                  </div>
+
+                  <div className='col-span-2 md:col-auto aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)]'>
+                    <Image
+                      src={content.images[2].image}
+                      alt={content.images[2].alt}
+                      placeholder='blur'
+                    />
+                  </div>
+                </div>
+              </FrameAnimation>
+            </div>
+          </div>
+        </div>
+        <FrameAnimation index={0} className='fade-up'>
+          <div className='bg-gray-700 aspect-video rounded-lg overflow-hidden md:mt-4 hidden lg:block shadow-[0_20px_80px_-20px_rgba(0,0,0,0.3)]'>
+            <div className='w-full h-full flex items-center justify-center'>
+              <Image
+                src={content.images[3].image}
+                alt={content.images[3].alt}
+                placeholder='blur'
+              />
+            </div>
+          </div>
+        </FrameAnimation>
+      </Wrapper>
+    </section>
+  );
+}

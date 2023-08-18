@@ -5,13 +5,13 @@ import { IoLogoLinkedin, IoLogoGithub, IoMdMenu } from 'react-icons/io';
 //////////////
 //////////////
 // link styles
-
+// 'font-medium hover:text-purple-900/70 data-[ui=active]:underline data-[ui=active]:text-purple-900/70',
 const linkStyles = {
   mainMenuLink:
-    'font-medium hover:text-purple-900/70 data-[ui=active]:underline data-[ui=active]:text-purple-900/70',
+    'h-10  border border-gray-800 rounded-full inline-block flex items-center justify-center px-5 font-medium data-[ui=active]:bg-purple-200/70 data-[ui=active]:border-purple-900/50 data-[ui=active]:text-black hover:text-white hover:bg-gray-800 hover:border-gray-800',
   button:
-    'h-10 w-10  flex md:hidden font-medium items-center justify-center bg-gray-200 border border-gray-700 text-gray-700 rounded-full data-[ui=active]:bg-gray-800 data-[ui=active]:text-white data-[ui=active]:border-gray-800 hover:bg-gray-800 hover:text-white',
-  icon: 'flex items-center justify-center h-10 w-10 bg-white text-gray-700 border border-gray-500 rounded-full text-xl hover:bg-purple-900/70 hover:text-white hover:border-purple-900/70',
+    'h-10 w-10  flex md:hidden font-medium items-center justify-center bg-white border border-gray-800 text-gray-800 rounded-full hover:bg-purple-200/70 hover:border-purple-900/50 hover:text-black',
+  icon: 'flex items-center justify-center h-10 w-10 bg-gray-800 text-white border border-gray-800  rounded-full text-xl hover:bg-purple-200/70 hover:border-purple-900/50 hover:text-black',
 } as const;
 
 const { mainMenuLink, button, icon } = linkStyles;
