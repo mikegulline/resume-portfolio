@@ -53,16 +53,6 @@ export default function HeroUserProfile() {
           <div className='border border-gray-800 bg-white p-2 rounded-lg overflow-hidden mt-10 lg:mt-0'>
             <div className='bg-gray-800 relative aspect-[4/3] border border-gray-800 rounded overflow-hidden'>
               <Image src={ProfilePic} alt='Mike Gulline' placeholder='blur' />
-              <div className='absolute right-5 bottom-5 z-10'>
-                <ul className='rounded-full backdrop-blur-sm bg-white/30 p-1 flex gap-2 items-center'>
-                  <li>
-                    <div className='rounded-full bg-gray-800 text-white w-10 h-10 flex justify-center items-center'>
-                      <span className='rotate-90'>:)</span>
-                    </div>
-                  </li>
-                  <li className='pr-10'>Hello! My name is Mike.</li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
