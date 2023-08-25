@@ -8,7 +8,7 @@ import ProfilePic from '@/public/images/mike-gulline.jpg';
 
 // Professional Full-Stack Web Development.
 const content = {
-  headline: 'Creative Full-Stack Web Engineer.',
+  headline: 'Creative Full-Stack Web Developer.',
   tags: ['Design', 'Develop', 'Deploy'],
   link: {
     text: '@mikegulline',
@@ -24,7 +24,7 @@ export default function HeroUserProfile() {
       <Wrapper>
         <div className='lg:columns-2 gap-10 xl:gap-20 py-10 md:py-20 xl:py-32'>
           <div className='flex flex-col justify-between gap-4 md:gap-6 xl:gap-8  lg:aspect-[4/3]'>
-            <h1 className='text-[10.3vw] lg:w-auto md:text-[5.8rem] lg:text-[3.6rem] xl:text-7xl leading-[1] md:leading-[1] lg:leading-[1] xl:leading-[1]  font-medium'>
+            <h1 className='text-[10.3vw] lg:w-auto md:text-[5.8rem] lg:text-[3.6rem] xl:text-7xl leading-[1.2] md:leading-[1.2] lg:leading-[1.2] xl:leading-[1.2]  font-medium'>
               <TextAnimation text={content.headline} />
             </h1>
             <div className='grow '>
@@ -41,7 +41,7 @@ export default function HeroUserProfile() {
                   className='group'
                   title={content.link.title}
                 >
-                  <div className='flex items-center gap-2 text-sm md:text-base text-purple-900/70 group-hover:text-black'>
+                  <div className='flex items-center gap-2 text-sm md:text-base text-gray-800 group-hover:text-black cursor-pointer group-hover:underline'>
                     <span>{content.link.text}</span> <BsArrowUpRight />
                   </div>
                 </Link>

@@ -28,14 +28,11 @@ export default function BannerLogos() {
               'PHP',
               'UX',
             ].map((item, i) => (
-              <span key={`strip${i}`}>
-                <span
-                  key={`strip${i}`}
-                  className='inline-block border border-white px-4 py-2 mx-1 rounded-full hover:bg-purple-200/70 hover:border-purple-900/50 hover:text-black cursor-pointer'
-                >
-                  {item}
-                </span>
-                <span>•</span>
+              <span
+                key={`strip${i}`}
+                className='inline-block border border-gray-800 px-5 py-2 ml-1 rounded-full hover:bg-purple-200/70 hover:border-purple-900/50 hover:text-black cursor-pointer'
+              >
+                {item}
               </span>
             ))}
           </>

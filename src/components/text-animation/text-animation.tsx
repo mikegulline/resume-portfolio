@@ -26,9 +26,14 @@ export default function TextAnimation({ text }: TextAnimationProps) {
       {word.split('').map((letter, x) => {
         index++;
         return (
-          <IndexWrap key={`${letter}-${x}`} className='letter' index={index}>
-            {letter}
-          </IndexWrap>
+          <span key={`${letter}-${x}`} className='letter-wrapper'>
+            <IndexWrap className='letter' index={index}>
+              {letter}
+            </IndexWrap>
+            <IndexWrap className='letter2' index={index}>
+              {letter}
+            </IndexWrap>
+          </span>
         );
       })}
       <span className='letter'>&nbsp;</span>

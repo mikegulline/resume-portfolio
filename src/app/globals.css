@@ -42,36 +42,6 @@ body {
     rgb(var(--background-start-rgb));
 } */
 
-.word {
-  position: relative;
-  display: inline-block;
-}
-
-.letter {
-  display: inline-block;
-  transform-origin: top;
-  visibility: hidden;
-  transform: translate3d(0, 100%, 0) rotateX(-90deg);
-}
-
-.inView .letter {
-  animation: letter__in 0.6s forwards calc(0.015s * var(--index));
-}
-
-@keyframes letter__in {
-  from {
-    visibility: visible;
-    transform: translate3d(0, 100%, 0%) rotateX(-90deg);
-    animation-timing-function: ease-in-out;
-  }
-
-  to {
-    visibility: visible;
-    transform: translate3d(0, 0%, 0) rotateX(0deg);
-    animation-timing-function: ease-in-out;
-  }
-}
-
 .fade-up {
   transform-origin: top;
   transform: translate3d(0, 40px, 0);
@@ -99,30 +69,72 @@ body {
   }
 }
 
-/* 
-.sentence {
-  display: block;
-}
-
 .word {
   position: relative;
+  line-height: 1;
   display: inline-block;
-  padding-bottom: 2%;
-  margin-bottom: -2%;
 }
 
+.letter-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.letter-wrapper span {
+  line-height: 1;
+  display: inline-block;
+}
 .letter {
-  will-change: transform;
-  transform-style: perserve-3d;
-  transform-origin: top;
-  transform: translate3d(0, 100%, 0) rotateX(-90deg);
-  display: inline-block;
-  visibility: hidden;
+  transform: translate3d(0, 0%, 0) rotateX(0deg);
+}
+.inView .letter {
+  animation: roll__back 0.6s calc(0.015s * var(--index));
 }
 
-.inView .letter {
-  transition: 0.5s;
-  transition-delay: calc(0.03s * var(--index));
-  transform: translate3d(0, 0%, 0) rotateX(0deg);
-  visibility: visible;
-} */
+.letter2 {
+  position: absolute;
+  left: 0;
+  transform: translate3d(0, 100%, 0) rotateX(-90deg);
+}
+.inView .letter2 {
+  animation: roll__in 0.6s forwards calc(0.015s * var(--index));
+}
+
+/* ? */
+
+@keyframes roll__in {
+  from {
+    transform-origin: top;
+    transform: translate3d(0, 100%, 0) rotateX(-90deg);
+    animation-timing-function: ease-in-out;
+  }
+  25% {
+    transform-origin: top;
+    transform: translate3d(0, 100%, 0) rotateX(-90deg);
+    animation-timing-function: ease-in-out;
+  }
+
+  to {
+    transform-origin: top;
+    transform: translate3d(0, 0%, 0) rotateX(0deg);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@keyframes roll__back {
+  from {
+    transform-origin: top;
+    transform: translate3d(0, 0%, 0) rotateX(0deg);
+    animation-timing-function: ease-in-out;
+  }
+  25% {
+    transform-origin: top;
+    transform: translate3d(0, 20%, 0) rotateX(-20deg);
+    animation-timing-function: ease-in-out;
+  }
+
+  to {
+    transform-origin: bottom;
+    transform: translate3d(0, -100%, 0) rotateX(-90deg);
+    animation-timing-function: ease-in-out;
+  }
+}
